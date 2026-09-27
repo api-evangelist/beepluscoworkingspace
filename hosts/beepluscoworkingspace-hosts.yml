@@ -1,0 +1,88 @@
+generated: '2026-09-27'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 6
+  own: 6
+  other_domain: 0
+  platform: 0
+  roles:
+  - api
+  - docs
+  - marketing
+  - other
+  - website
+hosts:
+- host: api.beeplus.io
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: beeplus.io
+  role: api
+  relation: own
+- host: app.beeplus.io
+  found_by:
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: beeplus.io
+  role: other
+  relation: own
+- host: beeplus.io
+  found_by:
+  - pointer
+  - probed
+  - contract-discovery
+  - well-known
+  types:
+  - TermsOfService
+  - PrivacyPolicy
+  - Website
+  serves: []
+  registrable_domain: beeplus.io
+  role: website
+  relation: own
+- host: blog.beeplus.io
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types:
+  - Blog
+  serves: []
+  registrable_domain: beeplus.io
+  role: marketing
+  relation: own
+- host: help.beeplus.io
+  found_by:
+  - pointer
+  - apis[]
+  - probed
+  - site-links
+  - docs-index
+  - contract-discovery
+  - well-known
+  types:
+  - Documentation
+  serves:
+  - docs
+  registrable_domain: beeplus.io
+  role: docs
+  relation: own
+- host: static.beeplus.io
+  found_by:
+  - probed
+  - site-links
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: beeplus.io
+  role: other
+  relation: own
